@@ -3,24 +3,25 @@
 
 int main()
 {
-    float inserido = 0, lista[100];
-    int i;
+    float valor, lista[15];
+    int pos = 0;
 
-    printf("Utilize -1 como flag\n");
-    for (i = 0; 1; i++) {
-        printf("\nInsira o valor:");
-        scanf("%f", &inserido);
+    printf("Cuidado!!! Flag = -1\n");
 
-        if (inserido != -1) {
-            printf("Valor inserido: %.1f \n", inserido);
-            lista[i] = inserido;
+    while (1) {
+        printf("Insira um valor: ");
+        scanf("%f", &valor);
+        if (valor != -1) {
+            printf("Valor inserido: %.1f\n\n", valor);
+            lista[pos] = valor;
+            pos++;
         } else {
-            printf("Flag reconhecida!");
             break;
         }
     }
 
-
+    int tamanho_da_lista = pos;
+    printf("Tamanho da lista: %i", pos);
 
     return 0;
 }
