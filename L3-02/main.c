@@ -7,31 +7,32 @@ int main()
     int pos = 0;
 
     while(1){
-    printf("Insira um valor: ");
-    scanf("%f", &vetor[pos]);
-    if(vetor[pos] == -1) {
-        break;
-    }
+        printf("Insira um valor: ");
+        scanf("%f", &vetor[pos]);
+        if(vetor[pos] == -1) {
+            break;
+        }
         pos++;
     }
     pos--;
 
-    int menor = 0;
-    int maior = 0;
+    float menor = vetor[0];
+    float maior = 0;
 
     for(int i = 0; i <= pos; i++) {
-        printf("MAIOR - %f %f\n", vetor[i], maior);
+        //printf("MAIOR - %f %f\n", vetor[i], maior);
         if(vetor[i] > maior) {
             maior = vetor[i];
         }
-        printf("MENOR - %f %f\n", vetor[i], menor);
-        if(vetor[i] < menor ){
+
+        //printf("MENOR - %f %f\n", vetor[i], menor);
+        if(menor > vetor[i]){
           menor = vetor[i];
         }
     }
 
-    printf("\no maior valor e %d", maior);
-    printf("\no menor valor e %d", menor);
+    printf("\no maior valor e %.1f", maior);
+    printf("\no menor valor e %.1f", menor);
 
 
     return 0;
