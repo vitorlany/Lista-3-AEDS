@@ -3,25 +3,36 @@
 
 int main()
 {
-    float valor, lista[15];
+    float vetor[15];
     int pos = 0;
 
-    printf("Cuidado!!! Flag = -1\n");
+    while(1){
+    printf("Insira um valor: ");
+    scanf("%f", &vetor[pos]);
+    if(vetor[pos] == -1) {
+        break;
+    }
+        pos++;
+    }
+    pos--;
 
-    while (1) {
-        printf("Insira um valor: ");
-        scanf("%f", &valor);
-        if (valor != -1) {
-            printf("Valor inserido: %.1f\n\n", valor);
-            lista[pos] = valor;
-            pos++;
-        } else {
-            break;
+    int menor = 0;
+    int maior = 0;
+
+    for(int i = 0; i <= pos; i++) {
+        printf("MAIOR - %f %f\n", vetor[i], maior);
+        if(vetor[i] > maior) {
+            maior = vetor[i];
+        }
+        printf("MENOR - %f %f\n", vetor[i], menor);
+        if(vetor[i] < menor ){
+          menor = vetor[i];
         }
     }
 
-    int tamanho_da_lista = pos;
-    printf("Tamanho da lista: %i", pos);
+    printf("\no maior valor e %d", maior);
+    printf("\no menor valor e %d", menor);
+
 
     return 0;
 }
