@@ -31,9 +31,15 @@ int main()
         }
     }
 
-    printf("\no maior valor e %.1f", maior);
-    printf("\no menor valor e %.1f", menor);
+    float soma = 0;
 
+    for (int j = 0; j <= pos; j++) {
+        soma = soma + vetor[j];
+    }
+
+    printf("\nMaior = %.1f", maior);
+    printf("\nMenor = %.1f", menor);
+    printf("\nMedia = %.1f", (soma / pos) );
 
     return 0;
 }
