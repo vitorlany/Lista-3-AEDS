@@ -1,20 +1,11 @@
 VAR
-S, F :Real
-Cont, Numero, N, D, Sinal :Inteiro
-
+x, f :inteiro
 INICIO
-|	S <- 0, N <- 1, D <- 1, Sinal <- 1
-|	leia(Numero)
-|	Cont <- 0
-|	enquanto (Cont < Numero)
-|	Faça
-|	|	F <- N ((D^3)*Sinal)
-|	|	S <- S + F
-|	|	N <- 1
-|	|	D <- D + 2
-|	|	Sinal <- Sinal * (-1)
-|	|	Cont++
-|	Fimfaça
-|	escreva(S)
+|	leia(x)
+|	f <- x
+|	Enquanto (x > 1) faça
+|	|	x <- x + 1
+|	|	f <- f * x
+|	Fimenquanto
+|	escreva(f)
 Fimalgoritmo
-	
