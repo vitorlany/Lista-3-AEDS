@@ -7,14 +7,13 @@
 
 int main()
 {
-    int calculo, sobra, novo_numero, propriedade;
+    int calculo, sobra, novo_numero, propriedade = 0;
     for (int num = 10000; num <= 99999; num++) {
         calculo = num;
         for (int i = 0; i < 5; i++) {
             sobra = calculo % 10;
             calculo = calculo / 10;
             novo_numero = novo_numero + (sobra * (10000 / pow(10, i)));
-            //printf("\n\n%i", novo_numero);
         }
         if (num == novo_numero) {
             propriedade++;
