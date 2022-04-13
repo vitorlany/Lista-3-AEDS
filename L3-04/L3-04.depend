@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1649869132 source:e:\github-repositorios\lista-3-aeds\l3-04\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
