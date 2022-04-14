@@ -15,7 +15,7 @@ int main()
     scanf("%i", &moeda);
 
     for (int i = 0; i < 10; i++) {
-        res = (rand() % 2);
+        res = (rand()%2);
         //printf("\n%i", res);
         if (res == moeda) {
             certa++;
