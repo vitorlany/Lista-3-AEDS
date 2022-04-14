@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /*
     10. Faça um programa para adivinhar um número escolhido pelo usuário, entre 1 e 1023. Indique ao
@@ -18,6 +19,7 @@ int main()
     min = 1;
     acertou = 0;
     tentativas = 0;
+    srand(time(NULL));
 
     for (tentativas = 0; (tentativas < 10 && (!(acertou))); tentativas++) {
         aleatorio = (rand() % max + min);
@@ -28,7 +30,7 @@ int main()
 
         switch(resposta) {
         case 1: // >
-             max = aleatorio;
+            max = aleatorio;
             break;
         case 2: // <
             min = aleatorio;

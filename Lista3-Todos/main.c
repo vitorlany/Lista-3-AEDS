@@ -330,5 +330,75 @@ void ex08(){
 */
 
 void ex09(){
+    int moeda, res = 0, certa = 0, errada = 0;
 
+    printf("Cara (0) ou Coroa? (1): ");
+    scanf("%i", &moeda);
+    srand(time(NULL));
+
+    for (int i = 0; i < 10; i++) {
+
+        res = (rand()%2);
+        printf("\n%i", res);
+        if (res == moeda) {
+            certa++;
+        } else {
+            errada++;
+        }
+    }
+
+    printf("Certas: %i\nErradas: %i", certa, errada);
+    /*
+    ENTRADA     SAIDA
+    1           6, 4
+    0           7, 3
+    */
+}
+
+/*
+    10. Faça um programa para adivinhar um número escolhido pelo usuário, entre 1 e 1023. Indique ao
+    final quantas tentativas foram necessárias. O programa deverá localizar o número escolhido pelo
+    usuário em no máximo 10 tentativas!
+*/
+
+void ex10(){
+    int numero, min, max, aleatorio, resposta, tentativas, acertou;
+
+    printf("Insira um numero entre 1 e 1023: ");
+    scanf("%i", &numero);
+
+    max = 1023;
+    min = 1;
+    acertou = 0;
+    tentativas = 0;
+    srand(time(NULL));
+
+    for (tentativas = 0; (tentativas < 10 && (!(acertou))); tentativas++) {
+        aleatorio = (rand() % max + min);
+
+        printf("\nNumero gerado: %i", aleatorio);
+        printf("\nO numero esta \n> - (1) \n< - (2) \n= - (3) ?");
+        scanf("%i", &resposta);
+
+        switch(resposta) {
+        case 1: // >
+            max = aleatorio;
+            break;
+        case 2: // <
+            min = aleatorio;
+            break;
+        case 3: // =
+            acertou = 1;
+            break;
+        }
+    }
+
+    printf("Foram usadas %i tentativas e o numero %s descoberto", tentativas, (acertou)? "foi":"nao foi");
+
+    /*
+    ENTRADA     SAIDA
+    5,1,1,3     3,1
+    30,1,3      2,1
+    2,1,1,1...  10,0
+*/
 }

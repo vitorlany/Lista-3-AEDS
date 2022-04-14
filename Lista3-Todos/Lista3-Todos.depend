@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1649944574 source:e:\github-repositorios\lista-3-aeds\lista3-todos\main.c
+1649946595 source:e:\github-repositorios\lista-3-aeds\lista3-todos\main.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 
