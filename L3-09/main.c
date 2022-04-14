@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /*
     9. Faça um programa para um jogo de cara ou coroa. Neste caso, o jogador escolhe cara ou coroa (0 –
@@ -13,10 +14,12 @@ int main()
 
     printf("Cara (0) ou Coroa? (1): ");
     scanf("%i", &moeda);
+    srand(time(NULL));
 
     for (int i = 0; i < 10; i++) {
+
         res = (rand()%2);
-        //printf("\n%i", res);
+        printf("\n%i", res);
         if (res == moeda) {
             certa++;
         } else {
@@ -29,6 +32,6 @@ int main()
 }
 /*
     ENTRADA     SAIDA
-    1           3, 7
+    1           6, 4
     0           7, 3
 */
