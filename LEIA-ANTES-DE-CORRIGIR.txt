@@ -1,0 +1,1 @@
+A pasta correta a ser corrigida é a pasta [Lista3-Todos]. Todas as outras pastas no arquivo são o passo-a-passo de cada exercício antes de junta-las em uma pasta só.
